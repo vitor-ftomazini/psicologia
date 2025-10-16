@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitor Ferrari Tomazini - Psicólogo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        /* Fundo gradiente com tons suaves e acolhedores (remetendo à saúde mental e felicidade) */
+        .gradient-bg {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 80%, rgba(255, 183, 197, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 70% 20%, rgba(168, 237, 234, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .typing-animation {
+            border-right: 2px solid #667eea;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: #667eea; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-gray-800">Vitor Ferrari Tomazini</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-blue-600 transition duration-300">Início</a>
+                    <a href="#psicoterapia" class="text-gray-700 hover:text-blue-600 transition duration-300">Psicoterapia</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-blue-600 transition duration-300">Sobre mim</a>
+                    <a href="#contato" class="text-gray-700 hover:text-blue-600 transition duration-300">Contato</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-t hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#inicio" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">Início</a>
+                <a href="#psicoterapia" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">Psicoterapia</a>
+                <a href="#sobre" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">Sobre mim</a>
+                <a href="#contato" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="gradient-bg text-gray-800 min-h-full flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 py-20 relative z-10">
+            <div class="text-center fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span id="typed-name">Vitor Ferrari Tomazini</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 font-medium">
+                    Psicologia Baseada em Evidências
+                </p>
+                <p class="text-lg mb-10 max-w-2xl mx-auto">
+                    Atendimentos presenciais em Londrina e online para todo Brasil
+                </p>
+                <div class="space-x-4">
+                    <a href="#psicoterapia" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-block">
+                        Conheça Meu Trabalho
+                    </a>
+                    <a href="#contato" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition duration-300 inline-block">
+                        Agendar Consulta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="psicoterapia" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Psicoterapia</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Abordagem científica e humanizada para seu bem-estar emocional
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-6">🧠</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Terapia Cognitivo-Comportamental</h3>
+                    <p class="text-gray-600 mb-6">Abordagem baseada em evidências científicas para identificar e modificar padrões de pensamento e comportamento.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Ansiedade e depressão</li>
+                        <li>• Transtornos de humor</li>
+                        <li>• Fobias e medos</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-6">💭</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Psicoterapia Individual</h3>
+                    <p class="text-gray-600 mb-6">Atendimento personalizado focado nas suas necessidades específicas e objetivos terapêuticos.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Autoconhecimento</li>
+                        <li>• Desenvolvimento pessoal</li>
+                        <li>• Resolução de conflitos</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-6">🌱</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Acompanhamento Online</h3>
+                    <p class="text-gray-600 mb-6">Sessões de psicoterapia online com a mesma qualidade do atendimento presencial.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Flexibilidade de horários</li>
+                        <li>• Conforto do seu lar</li>
+                        <li>• Atendimento nacional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Por que fazer terapia?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="text-6xl mb-6 text-center">🌟</div>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Ansiedade, medo, palpitações, tristeza, insônia, relacionamentos conturbados, dificuldades acadêmicas, insatisfação com a vida, incertezas quanto ao futuro ("O que vou fazer?", "Com que devo trabalhar?", "Casar, viajar ou ter filhos?"). Todos obstáculos presentes na rotina contemporânea e que às vezes exigem um alto grau de habilidades para que não se tornem um fardo pesado demais.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        E é aqui que nossos caminhos se cruzam. A terapia é um serviço em saúde mental que visa, de modo geral, trazer mais qualidade de vida para seus clientes - o que é atingido ao lidar de uma forma saudável com essas demandas do dia-a-dia.
+                    </p>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-green-400 to-blue-500 p-8 rounded-xl text-white">
+                        <h3 class="text-2xl font-bold mb-6">Benefícios da Terapia:</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><span class="text-2xl mr-3">✓</span> Maior autoconhecimento</li>
+                            <li class="flex items-center"><span class="text-2xl mr-3">✓</span> Melhores relacionamentos</li>
+                            <li class="flex items-center"><span class="text-2xl mr-3">✓</span> Redução da ansiedade e estresse</li>
+                            <li class="flex items-center"><span class="text-2xl mr-3">✓</span> Desenvolvimento de habilidades</li>
+                            <li class="flex items-center"><span class="text-2xl mr-3">✓</span> Maior qualidade de vida</li>
+                            <li class="flex items-center"><span class="text-2xl mr-3">✓</span> Resolução de conflitos internos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Ela funciona?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
+                    Essa é uma pergunta essencial, e a maneira mais confiável de respondê-la é medindo seus efeitos. Tal qual em outras áreas da saúde, como psicofarmacologia e fisioterapia, pesquisas clínicas são utilizadas para conhecermos melhor os efeitos das intervenções. Com base nelas, podemos dizer que as evidências mostram que a terapia funciona: traz alívio, força, significado à vida e muito mais.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover fade-in text-center">
+                    <div class="text-5xl mb-6">📊</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Evidências Científicas</h3>
+                    <p class="text-gray-600">Milhares de estudos comprovam a eficácia da psicoterapia no tratamento de diversos transtornos mentais e no bem-estar geral.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover fade-in text-center">
+                    <div class="text-5xl mb-6">🎯</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Resultados Mensuráveis</h3>
+                    <p class="text-gray-600">A Terapia Cognitivo-Comportamental mostra resultados significativos em 12-20 sessões para a maioria dos casos.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover fade-in text-center">
+                    <div class="text-5xl mb-6">💪</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Mudanças Duradouras</h3>
+                    <p class="text-gray-600">As habilidades aprendidas na terapia se mantêm ao longo do tempo, proporcionando benefícios duradouros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Como ela é feita?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
+                    Todo processo terapêutico envolve dois polos que se complementam: a relação terapêutica estabelecida entre psicólogo e cliente e as técnicas empregadas durante as sessões. Portanto, orientada por uma formulação de caso adequada e alimentada pelo compromisso entre profissional e paciente, a terapia avança por meio das técnicas utilizadas ao longo das sessões.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Processo Terapêutico</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Avaliação Inicial</h4>
+                                <p class="text-gray-600">Compreensão da sua história, dificuldades atuais e objetivos para a terapia.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Definição de Metas</h4>
+                                <p class="text-gray-600">Estabelecimento conjunto de objetivos claros e mensuráveis.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Intervenções</h4>
+                                <p class="text-gray-600">Aplicação de técnicas baseadas em evidências adaptadas às suas necessidades.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Monitoramento</h4>
+                                <p class="text-gray-600">Acompanhamento contínuo do progresso e ajustes quando necessário.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-purple-400 to-pink-500 p-8 rounded-xl text-white">
+                        <h3 class="text-2xl font-bold mb-6">Formato das Sessões</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">⏰</span>
+                                <span>50 minutos por sessão</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">📅</span>
+                                <span>Frequência semanal ou quinzenal</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">🏠</span>
+                                <span>Presencial ou online</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">🤝</span>
+                                <span>Ambiente acolhedor e sigiloso</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">📝</span>
+                                <span>Tarefas terapêuticas quando necessário</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">E os diagnósticos?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="text-center mb-8">
+                        <div class="text-6xl mb-4">🔍</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Diagnóstico como Ferramenta</h3>
+                    </div>
+                    <div class="mb-8">
+                        <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                            Identificar um diagnóstico geralmente é de grande ajuda: tanto o cliente quanto o psicólogo se sentem mais situados no contexto, e o psicólogo pode consultar uma literatura especializada no tema. Se esse conhecimento é adaptado às particularidades do paciente, sempre presentes, a probabilidade de eficácia terapêutica aumenta ainda mais.
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                            Ainda assim, vale lembrar que nem todas as dificuldades enfrentadas por uma pessoa se encaixam nos critérios exigidos para um transtorno mental; não há um "transtorno de não sei o que fazer da minha vida", por exemplo, ainda que esta seja uma situação importante de ser compreendida e orientada.
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                            Neste caso, estamos falando de valores, uma dimensão fundamental da vida humana: em que você acredita? O que te move? O que faz a vida valer a pena? Essas e outras perguntas (bem como exercícios) podem nortear a investigação sobre valores e fortalecer o senso de congruência e propósito, que nos ajudam a tomar decisões.
+                        </p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-4">O que é o diagnóstico?</h4>
+                            <p class="text-gray-600 mb-4">
+                                O diagnóstico é uma ferramenta que nos ajuda a compreender melhor seus sintomas e escolher as intervenções mais eficazes. Não é um rótulo, mas sim um mapa para o tratamento.
+                            </p>
+                            <p class="text-gray-600">
+                                Nem sempre é necessário um diagnóstico formal para iniciar a terapia. Muitas pessoas buscam ajuda para questões de desenvolvimento pessoal.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-4">Abordagem Humanizada</h4>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start"><span class="text-green-500 mr-2">•</span> Você é muito mais que um diagnóstico</li>
+                                <li class="flex items-start"><span class="text-green-500 mr-2">•</span> Foco na pessoa, não apenas nos sintomas</li>
+                                <li class="flex items-start"><span class="text-green-500 mr-2">•</span> Respeito à sua individualidade</li>
+                                <li class="flex items-start"><span class="text-green-500 mr-2">•</span> Tratamento personalizado</li>
+                                <li class="flex items-start"><span class="text-green-500 mr-2">•</span> Sigilo absoluto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Terapia é para sempre?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="text-6xl mb-6 text-center">⏳</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Duração Flexível</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Idealmente não. Ainda que a vida sempre traga desafios dos mais difíceis, não é a todo momento que precisamos de atendimento. Uma pessoa pode muito bem fazer terapia por um período e obter benefícios que lhe concedem objetiva e subjetivamente uma alta. E isso não a impede de buscá-la novamente se entender necessário.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        A duração da terapia varia de pessoa para pessoa e depende dos seus objetivos. Algumas questões podem ser resolvidas em poucas sessões, enquanto outras podem necessitar de um acompanhamento mais longo.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        Ainda assim, vale apontar: a frequência mais recomendada é semanal. Quinzenal, mensal ou esporádica são formas menos eficientes de terapia e podem não compensar no custo/benefício. O importante é que você tenha autonomia para decidir quando se sente preparado para finalizar o processo, sempre com orientação profissional.
+                    </p>
+                </div>
+                <div class="fade-in">
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-gray-800 mb-2">Terapia Breve (8-20 sessões)</h4>
+                            <p class="text-gray-600">Para questões específicas como fobias, ansiedade situacional ou desenvolvimento de habilidades pontuais.</p>
+                        </div>
+                        <div class="bg-green-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-gray-800 mb-2">Terapia Moderada (6 meses - 1 ano)</h4>
+                            <p class="text-gray-600">Para transtornos de ansiedade, depressão ou mudanças de padrões comportamentais mais complexos.</p>
+                        </div>
+                        <div class="bg-purple-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-gray-800 mb-2">Acompanhamento Contínuo</h4>
+                            <p class="text-sm text-gray-600">Para autoconhecimento, prevenção ou manutenção do bem-estar emocional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">E quando buscar terapia?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed mb-6">
+                    Não existe um momento "certo" ou "errado" para buscar ajuda. A terapia pode ser benéfica em diversos momentos da vida.
+                </p>
+                <p class="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
+                    Se você nota dificuldades com a rotina, as emoções, os pensamentos, comportamentos ou percebe um grau de sofrimento elevado e insatisfação com a vida, pode ser um bom momento para pesquisar os benefícios da psicoterapia e avaliar se vale o investimento. Procure um profissional com quem você se identifique, pois, como vimos, a relação terapêutica é essencial.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-4 text-center">🚨</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Momentos de Crise</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Perda de entes queridos</li>
+                        <li>• Separações ou divórcios</li>
+                        <li>• Perda de emprego</li>
+                        <li>• Doenças graves</li>
+                        <li>• Traumas</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-4 text-center">😰</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Sintomas Persistentes</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Ansiedade constante</li>
+                        <li>• Tristeza prolongada</li>
+                        <li>• Insônia ou alterações do sono</li>
+                        <li>• Irritabilidade excessiva</li>
+                        <li>• Dificuldades de concentração</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-4 text-center">🔄</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Padrões Repetitivos</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Relacionamentos conflituosos</li>
+                        <li>• Comportamentos autodestrutivos</li>
+                        <li>• Dificuldades no trabalho</li>
+                        <li>• Problemas familiares recorrentes</li>
+                        <li>• Baixa autoestima</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-4 text-center">🌱</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Desenvolvimento Pessoal</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Autoconhecimento</li>
+                        <li>• Melhoria da comunicação</li>
+                        <li>• Desenvolvimento de habilidades</li>
+                        <li>• Tomada de decisões importantes</li>
+                        <li>• Crescimento profissional</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-4 text-center">🎯</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Transições de Vida</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Mudança de cidade</li>
+                        <li>• Início da vida adulta</li>
+                        <li>• Casamento ou relacionamentos</li>
+                        <li>• Paternidade/Maternidade</li>
+                        <li>• Aposentadoria</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-4 text-center">🛡️</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Prevenção</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Manutenção da saúde mental</li>
+                        <li>• Fortalecimento emocional</li>
+                        <li>• Desenvolvimento de resiliência</li>
+                        <li>• Melhoria da qualidade de vida</li>
+                        <li>• Bem-estar geral</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-12 fade-in">
+                <div class="bg-white p-8 rounded-xl shadow-lg max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Lembre-se:</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Buscar ajuda é um ato de coragem e autocuidado. Não é necessário esperar que os problemas se tornem insuportáveis. A terapia pode ser preventiva e transformadora em qualquer momento da sua vida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Sobre Mim</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="w-80 h-80 rounded-full mx-auto overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="imagens/vitor.jpg" alt="Vitor Ferrari Tomazini - Psicólogo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="bg-gradient-to-br from-blue-400 to-purple-500 w-full h-full rounded-full flex items-center justify-center" style="display: none;">
+                            <div class="text-8xl">👨‍⚕️</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Psicólogo Clínico CRP 08/44918</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Sou psicólogo formado pela PUCPR - Londrina e pós-graduando em Psicologia Baseada em Evidências pelo InPBE.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Atualmente, atuo especialmente com Terapia Cognitivo-Comportamental (TCC), Terapia de Aceitação e Compromisso (ACT), Ativação Comportamental e Análise do Comportamento.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800">Formação</h4>
+                            <p class="text-sm text-gray-600">Psicologia - PUC</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800">Especialização</h4>
+                            <p class="text-sm text-gray-600">TCC, ACT e AC</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800">Registro</h4>
+                            <p class="text-sm text-gray-600">CRP 08/44918</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800">Experiência</h4>
+                            <p class="text-sm text-gray-600">Clínica</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4">Vamos Conversar?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto">
+                    Estou aqui para te ajudar. Entre em contato para agendar sua consulta.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-600 p-3 rounded-full">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-gray-300">vitorft40@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-600 p-3 rounded-full">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold">WhatsApp</p>
+                                <p class="text-gray-300">(14) 99108-7339</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-600 p-3 rounded-full">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Consultório</p>
+                                <p class="text-gray-300">Londrina, PR</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-600 p-3 rounded-full">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Atendimento Online</p>
+                                <p class="text-gray-300">Todo o Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-6">Agendar por WhatsApp</h3>
+                    <p class="text-gray-300 mb-6">Para agendar sua consulta rapidamente, clique no botão abaixo para iniciar uma conversa diretamente pelo WhatsApp.</p>
+                    <a href="https://wa.me/5514991087339?text=Ol%C3%A1%20Vitor%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20psicoterapia.%20Meu%20nome%20%C3%A9%3A%20%5BNome%5D" target="_blank" class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center space-x-2">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.04 2C6.54 2 2 6.54 2 12.04c0 1.55.45 3.03 1.25 4.31l-1.4 5.12 5.25-1.37c1.23.68 2.65 1.05 4.14 1.05 5.5 0 9.96-4.46 9.96-9.96s-4.46-9.96-9.96-9.96zm4.6 13.91l-.27-.14c-.95-.48-1.57-.6-2.61-.16-.9.37-1.6 1.45-2.22 2.12-.2.2-.42.27-.66.27-.24 0-.48-.09-.66-.27-.2-.2-.2-.48 0-.68l.8-.97c.27-.3.39-.55.39-.8l-.05-.18c-.14-.49-.75-.72-1.32-.38-1.12.67-2.03 1.76-2.58 2.62-.27.42-.14.9.27 1.25l.08.08c.2.2.43.3.69.3.26 0 .5-.1.7-.3l.1-.14c.48-.68 1.03-1.28 1.63-1.78.6-.5 1.25-.8 1.95-.9.7-.1 1.4-.04 1.9.43.2.19.3.43.3.69 0 .26-.1.5-.3.7l-.08.08c-.42.42-1.03.6-1.7.53-.66-.07-1.3-.2-1.9-.38l.1-.14c.45-.64.57-1.38.33-2.12-.14-.4-.53-.6-.97-.68zM12.04 4c4.46 0 8.08 3.62 8.08 8.08s-3.62 8.08-8.08 8.08-8.08-3.62-8.08-8.08 3.62-8.08 8.08-8.08z"/>
+                        </svg>
+                        <span>Iniciar Conversa</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2025 Vitor Ferrari Tomazini - Psicólogo CRP 08/44918. Todos os direitos reservados.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://www.instagram.com/vitor.ftomazini/" class="text-gray-400 hover:text-white transition duration-300">Instagram</a>
+                <a href="https://www.linkedin.com/in/vitor-ferrari-tomazini-a84763243/" class="text-gray-400 hover:text-white transition duration-300">LinkedIn</a>
+                <a href="https://wa.me/5514991087339" class="text-gray-400 hover:text-white transition duration-300">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section > div, .card-hover').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
